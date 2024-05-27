@@ -1,0 +1,30 @@
+.prose-blog-entry {
+	@apply prose 
+		max-w-3xl 
+		dark:prose-invert
+	 prose-headings:text-gray-200
+	 prose-p:text-lg prose-p:text-base-content 
+	 prose-strong:text-gray-300
+	 prose-ul:text-base-content;
+
+	ul {
+		li {
+			&::marker {
+				color: orange;
+			}
+		}
+	}
+
+	a:not(.btn) {
+		@apply text-blue-400;
+	}
+
+	a.btn {
+		@apply font-bold text-gray-200 no-underline;
+	}
+
+	code {
+		color: #f77d7b;
+		padding: 2px 4px;
+	}
+}

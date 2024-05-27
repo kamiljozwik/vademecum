@@ -1,0 +1,44 @@
+.gradient-text {
+	@apply bg-gradient-to-t from-orange-500 to-yellow-500;
+	background-clip: text;
+	color: rgba(0, 0, 0, 0) !important;
+	-webkit-background-clip: text;
+}
+
+.gradient-text-green {
+	@apply bg-gradient-to-t from-green-700 to-green-400;
+	background-clip: text;
+	color: rgba(0, 0, 0, 0);
+	-webkit-background-clip: text;
+}
+
+.gradient-text-pink {
+	@apply bg-gradient-to-r from-orange-500 to-pink-500;
+	background-clip: text;
+	color: rgba(0, 0, 0, 0);
+	-webkit-background-clip: text;
+}
+
+.gradient-slide {
+	@apply bg-gradient-to-r from-orange-500 to-pink-500;
+	background-size: 200% 200%;
+	animation: gradiant-move 2s ease-in-out infinite;
+	background-clip: text;
+	-webkit-background-clip: text;
+	transition: color 0.2s ease-in-out;
+}
+.gradient-slide:hover {
+	color: rgba(0, 0, 0, 0);
+}
+
+.gradient-line {
+	@apply my-6 h-1 w-24 rounded-full bg-gradient-to-r from-orange-600 to-orange-400;
+}
+
+.gradient-line-gray {
+	@apply mx-auto my-12 h-1 w-24 rounded-full bg-gradient-to-r from-neutral-600 to-neutral-400;
+}
+
+.gradient-line-purple {
+	@apply mx-auto my-12 h-1 w-24 rounded-full bg-gradient-to-r from-purple-600 to-purple-400;
+}

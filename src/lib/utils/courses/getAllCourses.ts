@@ -1,0 +1,18 @@
+import type { Course, CourseData } from './types';
+
+export const getAllCourses = async (paths: Record<string, unknown>) => {
+	const courses: CourseData[] = [];
+
+	for (const path in paths) {
+		const file = paths[path];
+		const slug = path.split('/').at(-2);
+
+		if (file && typeof file === 'object' && 'metadata' in file && 'default' in file && slug) {
+			const metadata = file.metadata as Omit<Course, 'slug'>;
+			const post = { meta: { ...metadata, slug }, content: file.default } satisfies CourseData;
+			courses.push(post);
+		}
+	}
+
+	return courses.sort((a, b) => b.meta.order - a.meta.order);
+};
