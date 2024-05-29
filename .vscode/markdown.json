@@ -1,0 +1,26 @@
+{
+	"New Lesson": {
+		"scope": "md",
+		"prefix": "addLesson",
+		"body": [
+			"---",
+			"title: Podaj tytuł...",
+			"description: ''",
+			"order: 00",
+			"video: https://player.vimeo.com/video/111111111?h=b111111feb",
+			"video_length: '00:00'",
+			"free: false",
+			"extra_links:",
+			"  - title: Podaj tytuł...",
+			"    href: Podaj link...",
+			"---"
+		],
+		"description": "New lesson"
+	},
+	"New Chapter": {
+		"scope": "md",
+		"prefix": "addChapter",
+		"body": ["---", "title: Podaj tytuł...", "description: Podaj opis...", "order: 00", "---"],
+		"description": "New chapter"
+	}
+}

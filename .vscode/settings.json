@@ -1,0 +1,5 @@
+{
+  "svg.preview.background": "editor",
+  "scss.lint.unknownAtRules": "ignore",
+  "css.lint.unknownAtRules": "ignore"
+}

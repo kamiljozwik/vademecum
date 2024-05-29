@@ -1,9 +1,0 @@
-{
-	"projects": {
-		"default": "frontstack-kursy-dev",
-		"dev": "frontstack-kursy-dev",
-		"prod": "frontstack-kursy"
-	},
-	"targets": {},
-	"etags": {}
-}
