@@ -21,9 +21,9 @@ export const load = (async ({ params, parent }) => {
   );
 
   const course = params.course;
-  const allCourses = await parent();
+  const allCourses = (await parent()).courses;
 
-  const currentCourse = allCourses.courses.find((c) => c.meta.slug === course);
+  const currentCourse = allCourses.find((c) => c.meta.slug === course);
 
   const chaptersWithLessons = getChaptersWithLessons(
     params.course,

@@ -1,4 +1,4 @@
-<script lang="ts">
+<script async lang="ts">
   import { page } from "$app/stores";
   import CoursePage from "./components/CoursePage.svelte";
   import PageHeader from "$lib/components/ui/PageHeader.svelte";

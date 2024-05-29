@@ -45,9 +45,7 @@
               {#if isLessonActive(lessonMeta, chapterData[0])}
                 <div class="ml-5">🔥</div>
               {:else}
-                <span class="px-2 py-1 text-xs"
-                  >{lessonMeta.video_length || "tekst"}</span
-                >
+                <span class="px-2 py-1 text-xs"></span>
               {/if}
             </div>
           </a>
@@ -97,10 +95,6 @@
                   <span class="mr-auto">{lessonMeta.title}</span>
                   {#if isLessonActive(lessonMeta, chapterData[0])}
                     <div class="ml-5">🔥</div>
-                  {:else}
-                    <span class="px-2 py-1 text-xs"
-                      >{lessonMeta.video_length || "tekst"}</span
-                    >
                   {/if}
                 </a>
               </li>

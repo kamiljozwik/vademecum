@@ -3,7 +3,7 @@ import type { LayoutLoad } from "./$types";
 
 export const load = (async () => {
   const paths = import.meta.glob("./_content/*/*.md", { eager: true });
-  const courses = getAllCourses(paths);
+  const courses = await getAllCourses(paths);
 
   return { courses };
 }) satisfies LayoutLoad;
