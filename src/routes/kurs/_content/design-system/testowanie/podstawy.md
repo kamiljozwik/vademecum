@@ -2,135 +2,92 @@
 title: Podstawy
 description: ""
 order: 10
-extra_links:
-  - title: Podaj tytuł...
-    href: Podaj link...
 ---
 
-## Testy Jednostkowe
+Nie chcemy w tym rozdziale tworzyć całego kursu dotyczącego testowania komponentów, ale myślę, że warto zrobić szybkie powtórzenie najważniejszych tematów związanych z testowaniem w kontekście Design Systemu.
 
-Testy jednostkowe to podstawa zapewnienia jakości i niezawodności komponentów w Twojej bibliotece. W tej lekcji dowiesz się, jak pisać i uruchamiać testy jednostkowe dla komponentów React przy użyciu `Jest` i `Vitest`.
+### Typy testów
 
-## Wprowadzenie do `Jest` i `Vitest`
+- **Testy jednostkowe (`unit tests`)**:
+  Testują pojedyncze funkcje lub komponenty w izolacji, sprawdzając, czy działają zgodnie z oczekiwaniami. Są szybkie i pozwalają na dokładne sprawdzenie logiki biznesowej.
 
-`Jest` to popularne narzędzie do testowania jednostkowego stworzone przez Facebooka. Jest szeroko stosowane w ekosystemie React ze względu na swoją prostotę i wszechstronność. `Vitest` to nowsze narzędzie, które zyskuje na popularności dzięki swojej szybkości i integracji z Vite, nowoczesnym bundlerem dla aplikacji frontendowych.
+- **Testy integracyjne (`integration tests`)**:
+  Testują interakcje między różnymi komponentami i modułami. Upewniają się, że komponenty współpracują ze sobą poprawnie.
 
-## Pisanie testów jednostkowych dla komponentów
+- **Testy end-to-end (`E2E`)**:
+  Symulują rzeczywiste scenariusze użytkownika, sprawdzając pełne ścieżki zachowań użytkownika. Są bardziej kompleksowe, ale też wolniejsze i bardziej złożone w utrzymaniu. W przypadku Design Systemu i biblioteki komponentów, raczej dość rzadko będziemy z nich korzystać.
 
-1. **Instalacja narzędzi do testowania**:
+### Narzędzia do testowania
 
-   - Aby zainstalować `Jest`, użyj następującej komendy:
-     ```bash
-     npm install --save-dev jest
-     ```
-   - Aby zainstalować `Vitest`, użyj:
-     ```bash
-     npm install --save-dev vitest
-     ```
+- **[Jest](https://jestjs.io/)**:
+  Jest to framework do testów jednostkowych w ekosystemie React. Integruje się fajnie z `React Testing Library` i pozwala na dość łatwe pisanie testów.
 
-2. **Konfiguracja**:
+- **[Vitest](https://vitest.dev/)**:
+  Stosunkowo nowa, szybsza (oparta na `Vite`) i zdobywająca coraz większą popularność alternatywa dla `Jest`.
 
-   - W przypadku `Jest`, dodaj skrypt testowy do `package.json`:
-     ```json
-     "scripts": {
-       "test": "jest"
-     }
-     ```
-   - W przypadku `Vitest`, dodaj skrypt testowy do `package.json`:
-     ```json
-     "scripts": {
-       "test": "vitest"
-     }
-     ```
+- **[Testing Library](https://testing-library.com/)**:
+  Biblioteka do testowania komponentów React, Vue, Angular, Svelte i Preact, która kładzie nacisk na testowanie zachowania użytkownika, a nie szczegółów implementacyjnych. Umożliwia testowanie interakcji z komponentami w sposób zbliżony do rzeczywistego użycia.
 
-3. **Podstawowy test komponentu**:
+- **[Playwright](https://playwright.dev/)**:
+  Bardzo popularne narzędzie do testów E2E, ale również potrafi znaleźć zastosowanie przy testach jednostkowych i integracyjnych.
 
-   - Tworzymy plik testowy dla komponentu, np. `Button.test.js`, i importujemy narzędzia testowe oraz komponent:
-     ```javascript
-     import React from "react";
-     import { render } from "@testing-library/react";
-     import Button from "./Button";
-     ```
+- **[Cypress](https://www.cypress.io/)**:
+  Kolejne narzędzie do testów E2E, które oferuje przyjazny interfejs i potężne możliwości automatyzacji testów. Idealne do testowania pełnych ścieżek użytkownika w aplikacji.
 
-4. **Pisanie testu**:
-   - Użyj `describe` i `it` aby zdefiniować zestaw testów i pojedynczy test. Przykładowo, aby sprawdzić, czy komponent `Button` renderuje się poprawnie:
-     ```javascript
-     describe("Button Component", () => {
-       it("should render correctly", () => {
-         const { getByText } = render(<Button>Click me</Button>);
-         expect(getByText("Click me")).toBeInTheDocument();
-       });
-     });
-     ```
+- **[Mock Service Worker](https://mswjs.io/)**:
+  Biblioteka do _mockowania_ zapytań sieciowych, działająca zarówno w przeglądarce jak i w Node.js.
 
-## Najlepsze praktyki
+## Best practices 💪
 
-- **Izolacja testów**: Upewnij się, że każdy test jest niezależny od innych, aby zmiany w jednym teście nie wpływały na wyniki innych testów.
-- **Testowanie przypadków krawędziowych**: Pamiętaj o testowaniu nie tylko standardowych scenariuszy, ale również przypadków krawędziowych, aby zapewnić pełną pokrycie funkcjonalności.
-- **Korzystanie z `beforeEach` i `afterEach`**: Te funkcje pozwalają na ustawianie i czyszczenie środowiska testowego przed i po każdym teście.
+### 1. Pisanie testów zgodnych z zachowaniem użytkownika
 
-Testy jednostkowe są kluczowe dla zapewnienia jakości kodu i stabilności aplikacji. W tej lekcji nauczyliśmy się, jak pisać i uruchamiać podstawowe testy jednostkowe dla komponentów React za pomocą `Jest` i `Vitest`. Teraz jesteś gotowy do wdrożenia testów jednostkowych w swojej bibliotece komponentów.
+- Skup się na tym, jak użytkownicy wchodzą w interakcję z komponentami. Używaj narzędzi takich jak `Testing Library`, które promują testowanie z perspektywy użytkownika.
+- Unikaj testowania wewnętrznej implementacji komponentów, chyba że jest to absolutnie konieczne.
 
-## Testy Integracyjne
+### 2. Utrzymywanie testów prostymi i czytelnymi
 
-Testy integracyjne sprawdzają, jak różne części aplikacji współpracują ze sobą. W tej lekcji dowiesz się, jak pisać testy integracyjne dla komponentów React przy użyciu `Testing Library`.
+- Pisanie prostych i zrozumiałych testów ułatwia ich utrzymanie i zmniejsza ryzyko błędów. Preferuj `clean code` nad `smart code`.
+- Używaj opisowych nazw testów, które jasno wskazują, co jest testowane.
 
-## Używanie `Testing Library` do testów integracyjnych
+### 3. Izolacja komponentów
 
-`Testing Library` to zestaw narzędzi do testowania komponentów React, który skupia się na testowaniu komponentów z perspektywy użytkownika. Jego głównym celem jest ułatwienie pisania testów, które są łatwe do zrozumienia i utrzymania.
+- Testuj komponenty w izolacji, aby upewnić się, że działają poprawnie niezależnie od innych części aplikacji.
+- Używaj mocków do symulowania zależności zewnętrznych.
 
-## Instalacja `Testing Library`
+### 4. Testowanie różnych stanów komponentów
 
-Aby zainstalować `Testing Library`, użyj następującej komendy:
+- Sprawdź, jak komponenty zachowują się w różnych stanach (np. załadowany, ładowanie, błąd).
+- Testuj różne kombinacje właściwości (`props`), aby upewnić się, że komponenty reagują poprawnie na zmiany.
 
-```bash
-npm install --save-dev @testing-library/react @testing-library/jest-dom
-```
+### 5. Testowanie dostępności (`a11y`)
 
-## Pisanie testów integracyjnych
+- Upewnij się, że komponenty są dostępne dla wszystkich użytkowników, w tym osób z niepełnosprawnościami.
+- Używaj narzędzi do testowania dostępności, takich jak [axe-core](https://github.com/dequelabs/axe-core) lub [@axe-core/react](https://github.com/dequelabs/axe-core-npm/tree/develop/packages/react), aby automatycznie wykrywać problemy związane z dostępnością.
 
-1. **Tworzenie testu integracyjnego**:
+### 6. Regularne przeglądy i aktualizacje testów
 
-   - Tworzymy plik testowy dla zestawu komponentów, np. `App.test.js`, i importujemy narzędzia testowe oraz komponenty:
-     ```javascript
-     import React from "react";
-     import { render, screen } from "@testing-library/react";
-     import App from "./App";
-     ```
+- Regularnie przeglądaj testy, aby upewnić się, że są aktualne i odpowiadają bieżącym wymaganiom projektu.
+- Usuwaj lub aktualizuj testy, które stały się nieaktualne lub niepotrzebne.
 
-2. **Pisanie testu**:
+### 7. Integracja testów z CI/CD
 
-   - Użyj `describe` i `it` aby zdefiniować zestaw testów i pojedynczy test. Przykładowo, aby sprawdzić, czy aplikacja renderuje główny nagłówek:
-     ```javascript
-     describe("App Component", () => {
-       it("should render the main header", () => {
-         render(<App />);
-         const headerElement = screen.getByText(/welcome to my app/i);
-         expect(headerElement).toBeInTheDocument();
-       });
-     });
-     ```
+- Zintegruj testy z systemem ciągłej integracji (`CI`), aby były automatycznie uruchamiane przy każdym wdrożeniu / Pull Requeście.
 
-3. **Sprawdzanie interakcji**:
-   - Możemy również testować interakcje użytkownika, takie jak kliknięcia przycisków. Przykładowo, aby sprawdzić, czy kliknięcie przycisku zmienia tekst:
-     ```javascript
-     describe("App Component", () => {
-       it("should change text on button click", () => {
-         render(<App />);
-         const buttonElement = screen.getByRole("button", {
-           name: /click me/i,
-         });
-         buttonElement.click();
-         const updatedText = screen.getByText(/you clicked the button/i);
-         expect(updatedText).toBeInTheDocument();
-       });
-     });
-     ```
+### 8. Używanie snapshotów z rozwagą
 
-## Najlepsze praktyki
+- `Snapshot testing` (o tym więcej w następnej lekcji) jest przydatny do szybkiego wykrywania zmian w strukturze komponentów, ale nie powinien zastępować testów funkcjonalnych.
+- Regularnie przeglądaj i aktualizuj snapshoty, aby były zgodne z oczekiwaniami.
 
-- **Testowanie z perspektywy użytkownika**: Skup się na testowaniu aplikacji tak, jakbyś był użytkownikiem. `Testing Library` dostarcza metody, które ułatwiają testowanie interakcji użytkownika.
-- **Unikanie testowania szczegółów implementacji**: Testy integracyjne powinny koncentrować się na sprawdzaniu, czy komponenty współpracują ze sobą poprawnie, a nie na wewnętrznych szczegółach implementacji.
-- **Używanie `async` i `waitFor`**: W przypadku asynchronicznych interakcji, takich jak zapytania sieciowe, używaj `async` i `waitFor`, aby upewnić się, że testy czekają na zakończenie wszystkich operacji asynchronicznych.
+### 9. Testowanie stylów i responsywności
 
-Testy integracyjne są kluczowe dla zapewnienia, że różne części aplikacji współpracują ze sobą poprawnie. W tej lekcji nauczyliśmy się, jak pisać i uruchamiać testy integracyjne dla komponentów React za pomocą `Testing Library`. Teraz jesteś gotowy do wdrożenia testów integracyjnych w swojej bibliotece komponentów.
+- Upewnij się, że komponenty są poprawnie stylizowane i responsywne na różnych urządzeniach i rozdzielczościach ekranu.
+- Używaj narzędzi do testowania responsywności, takich jak `Storybook` (o tym również więcej w kolejnych lekcjach tego rozdziału) z pluginami do testowania stylów i układów.
+
+### 10. Dokumentacja testów
+
+- Dokumentuj cele i zakres testów, aby inni członkowie zespołu mogli łatwo zrozumieć, co i dlaczego jest testowane.
+- Używaj komentarzy, aby wyjaśnić złożone lub nietypowe testy.
+
+### 11. Pisz testy zaraz do developmencie
+
+- Nie oszukuj się, że dopiszesz je później 😉

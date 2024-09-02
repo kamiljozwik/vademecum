@@ -35,6 +35,8 @@ HOC to funkcje, które przyjmują komponent jako argument i zwracają nowy kompo
 
 Render props to technika, która polega na przekazywaniu funkcji jako prop do komponentu, która pozwala na kontrolowanie, co ma być renderowane. Jest to użyteczne, gdy chcemy podzielić logikę i renderowanie. Na przykład, komponent `MouseTracker` może używać render props do śledzenia pozycji kursora i renderowania różnych elementów w zależności od jego pozycji.
 
+💁 Mała uwaga - dzisiaj już dużo rzadziej spotykamy użycie `HOC` oraz `render props`. Dużo częściej teraz korzystamy z `hooków`, ale na pewno warto wiedzieć czym są i jak działają `HOC` oraz `render props`.
+
 ## Przykład kompozycji w React
 
 ```jsx

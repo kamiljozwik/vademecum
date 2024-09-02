@@ -3,67 +3,42 @@ title: Biblioteki
 description: ""
 order: 20
 extra_links:
-  - title: Podaj tytuł...
-    href: Podaj link...
+  - title: Headless UI vs Radix UI React/Vue Primitives
+    href: https://www.youtube.com/watch?v=BtdwOdtg03c
+  - title: What is Radix UI?
+    href: https://www.youtube.com/watch?v=1JnwJBtg4VA
+  - title: This UI component library is mind-blowing
+    href: https://www.youtube.com/watch?v=RPa3_AD1_Vs
 ---
 
-Gdy zaczynasz przygodę z `headless UI components`, warto znać najpopularniejsze biblioteki, które oferują gotowe rozwiązania logiki i funkcjonalności, pozostawiając pełną kontrolę nad wyglądem w Twoich rękach. Oto kilka z najpopularniejszych bibliotek `headless UI components`, które warto poznać:
+W kontekście budowania Design Systemów, biblioteki typu `headless` zdobywają coraz większą popularność. Jak już wiemy, zapewniają one zestaw komponentów, które można łatwo dostosować do własnych potrzeb, ponieważ nie narzucają one konkretnego wyglądu ani stylu. Dzięki temu można je zintegrować / dostosować do naszych potrzeb.
 
-### 1. Radix UI
+Oto kilka najpopularniejszych bibliotek `Headless UI`, które warto poznać:
 
-**Radix UI** to zbiór unikalnych, dostępnych komponentów React, które dostarczają logikę bez żadnych domyślnych stylów. Radix UI jest idealnym rozwiązaniem, jeśli zależy Ci na pełnej kontroli nad wyglądem komponentów, a jednocześnie chcesz skorzystać z gotowej logiki.
+- [Radix](https://www.radix-ui.com/)
 
-- **Zalety**:
+  Radix dzielimy na dwa osobne byty: [Radix Primitives](https://www.radix-ui.com/primitives) (nieostylowane, `a11y-ready` komponenty) oraz [Radix UI](https://www.radix-ui.com/) (komponenty już z zaaplikowanymi domyślnymi stylami).
 
-  - Wysoka dostępność (`accessibility`)
-  - Modułowość i reużywalność
-  - Świetna dokumentacja
+- [Headless UI](https://headlessui.com/) od Tailwind Labs
 
-- **Przykłady komponentów**:
-  - `Dropdown Menu`
-  - `Dialog`
-  - `Tooltip`
+  Jest to biblioteka opracowana przez twórców `Tailwind CSS`. Zawiera komponenty takie jak `Dropdown`, `Modal`, `Tabs` i inne, które można stylizować według własnych potrzeb.
 
-### 2. React Aria
+- [React Aria](https://react-spectrum.adobe.com/react-aria/) od Adobe
 
-**React Aria** to biblioteka, która dostarcza zestaw hooków React do tworzenia dostępnych komponentów UI. Zamiast gotowych komponentów, React Aria oferuje narzędzia do budowania własnych komponentów, zachowując pełną kontrolę nad ich wyglądem i działaniem.
+  Ta biblioteka skupia się na dostępności (`accessibility`). Zawiera zestaw hooków i komponentów, które pomagają tworzyć aplikacje zgodne z `WAI-ARIA`. Jest ona częścią większego ekosystemu `React Spectrum`, ale może być używana samodzielnie.
 
-- **Zalety**:
+- [Reakit](https://reakit.io/)
 
-  - Skupienie na dostępności
-  - Elastyczność i łatwość integracji
-  - Bogaty zestaw hooków
+  `Reakit` oferuje bogaty zestaw komponentów, które są zgodne z `WAI-ARIA` i jak nie trudno się domyśleć, są one kompatybilne tylko z Reactem.
 
-- **Przykłady hooków**:
-  - `useButton`
-  - `useDialog`
-  - `useTooltip`
+- [Ark](https://ark-ui.com//)
 
-### 3. Shadcn
+  Biblioteka `Headless UI` od twórców popularnej biblioteki UI, [chakra-ui](https://v2.chakra-ui.com/). Dobrze współpracuje z Reactem, Solidem oraz Vue.
 
-**Shadcn** to biblioteka `headless UI components`, która oferuje elastyczne i modułowe komponenty, koncentrując się na prostocie użycia i możliwościach dostosowania. Shadcn pozwala na tworzenie komponentów, które są łatwe do stylizowania i integracji z różnymi systemami stylów.
+Każda z tych bibliotek ma oczywiście swoje unikalne cechy i zalety, które mogą być przydatne w różnych projektach.
 
-- **Zalety**:
+Wybór odpowiedniej biblioteki zależy od specyficznych potrzeb projektu oraz preferencji zespołu developerskiego.
 
-  - Łatwość użycia
-  - Modułowość
-  - Skupienie na prostocie
+Warto również mieć na uwadze projekt [Shadcn](https://ui.shadcn.com/), który to jest gotowym, _copy/paste-friendly_ Design Systemem, w którym znajdziemy komponenty typu `headless` pochodzące m.in. z `Radix Primitives`, którą są wstępnie ostylowane za pomocą Tailwinda.
 
-- **Przykłady komponentów**:
-  - `Modal`
-  - `Dropdown`
-  - `Accordion`
-
-### Dlaczego warto korzystać z tych bibliotek?
-
-- **Pełna kontrola nad stylizacją**: Możesz dostosować każdy aspekt wyglądu swoich komponentów, co jest kluczowe dla zachowania spójności wizualnej w Twojej aplikacji.
-- **Dostępność**: Biblioteki te kładą duży nacisk na dostępność, co oznacza, że Twoje komponenty będą dostępne dla wszystkich użytkowników, niezależnie od ich ograniczeń.
-- **Szybkość rozwoju**: Dzięki gotowej logice możesz skupić się na stylizacji i interakcji, co przyspiesza proces tworzenia komponentów.
-
-### Praktyczne zastosowanie
-
-Załóżmy, że tworzysz aplikację e-commerce. Chcesz mieć pewność, że wszystkie elementy interaktywne są dostępne i łatwe do użycia. Korzystając z `React Aria`, możesz szybko zbudować dostępne przyciski, formularze i dialogi, dostosowując ich wygląd do potrzeb swojego projektu. Z `Radix UI` możesz stworzyć skomplikowane menu rozwijane, które będzie działać idealnie w każdej przeglądarce i urządzeniu.
-
-### Podsumowanie
-
-Biblioteki `headless UI components` takie jak **Radix UI**, **React Aria** i **Shadcn** oferują elastyczność, dostępność i szybkość rozwoju, które są nieocenione w nowoczesnym rozwoju front-endu. Wybierając odpowiednią bibliotekę, możesz skupić się na tworzeniu wyjątkowych interfejsów użytkownika, zachowując pełną kontrolę nad każdym aspektem ich wyglądu i funkcjonalności.
+Może to być fajny punkt startowy do tworzenia waszego własnego Design Systemu.

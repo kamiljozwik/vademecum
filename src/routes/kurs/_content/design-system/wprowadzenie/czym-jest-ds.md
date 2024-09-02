@@ -9,29 +9,37 @@ extra_links:
     href: https://www.youtube.com/watch?v=f1Jecbpu2RE
 ---
 
-Design system to zestaw zasad, komponentów i narzędzi, które pomagają zespołom tworzyć spójne, efektywne i skalowalne interfejsy użytkownika.
+## Czym jest design system?
 
-Wyobraź sobie, że budujesz dom – design system to Twoja skrzynka narzędziowa, plany architektoniczne i zestaw standardów budowlanych w jednym. Dzięki niemu, każdy element – od najmniejszych detali, takich jak guziki, po większe struktury, jak układ strony – wygląda i działa w sposób spójny.
+Design system to uporządkowany zbiór zasad, komponentów interfejsu użytkownika oraz dokumentacji, który pomaga w utrzymaniu spójności wizualnej i funkcjonalnej w naszych aplikacjach. To coś więcej niż tylko zestaw gotowych elementów - to kompletne narzędzie, które ułatwia pracę zarówno projektantom, jak i programistom, umożliwiając im skupienie się na tworzeniu wyjątkowych doświadczeń użytkownika, zamiast ciągłego "wymyślania koła na nowo".
 
-## Najważniejsze elementy Design Systemu:
+Pomyśl o systemie projektowym jak o swoistej "bibliotece" interfejsu, w której znajdziesz nie tylko przyciski, pola tekstowe czy karty, ale także wytyczne dotyczące typografii, palety kolorów, układu elementów na stronie, interakcji, animacji oraz wiele innych. To kompendium wiedzy o tym, jak powinien wyglądać i działać Twój produkt, dostępne dla każdego członka zespołu.
 
-- **Jasno określone zasady**
+Design system ma za zadanie:
 
-Zasady są jak DNA Twojego systemu projektowania. Określają, jak powinien wyglądać i zachowywać się każdy element. To one definiują paletę kolorów, typografię, odstępy itd.
+- **Zapewnić spójność wizualną** - wszystkie elementy interfejsu wyglądają i zachowują się tak samo, niezależnie od tego, kto i kiedy je tworzył. To buduje zaufanie użytkowników i wzmacnia wizerunek marki.
+- **Przyspieszyć proces developmentu** - gotowe komponenty pozwalają zaoszczędzić czas na projektowaniu i kodowaniu od podstaw, umożliwiając szybsze wprowadzanie nowych funkcjonalności na rynek.
+- **Ułatwić skalowanie projektu** - nowe funkcjonalności można dodawać bez obawy o zaburzenie istniejącego układu, co jest szczególnie ważne w przypadku dużych i rozbudowanych aplikacji.
+- **Poprawić komunikację w zespole** - wszyscy pracują w oparciu o te same zasady i komponenty, co minimalizuje ryzyko nieporozumień i błędów, a także ułatwia wprowadzanie nowych osób do projektu.
+- **Zwiększyć dostępność** - dobrze zaprojektowany design system uwzględnia potrzeby różnych użytkowników, w tym osób z niepełnosprawnościami, zapewniając im równy dostęp do treści i funkcjonalności.
 
-- **Komponenty**
+Design system to inwestycja, która przynosi długoterminowe korzyści. Choć jego stworzenie wymaga początkowego nakładu pracy, to w dłuższej perspektywie pozwala zaoszczędzić czas i pieniądze, a także znacząco poprawia jakość produktu końcowego, czyniąc go bardziej użytecznym, estetycznym i spójnym.
 
-Komponenty to gotowe do użycia elementy interfejsu użytkownika, takie jak przyciski, formularze, karty, itp. Zamiast tworzyć każdy z tych elementów od zera w każdym projekcie, korzystasz z gotowych, przetestowanych i spójnych komponentów.
+## Najważniejsze elementy
 
-- **Narzędzia**
+W skład `Design System` (najczęściej) wchodzą:
 
-Narzędzia wspierają implementację i utrzymanie systemu projektowania. Przykłady to `Storybook` do dokumentowania komponentów, `Figma` do projektowania interfejsów, czy `Nx` do zarządzania monorepozytorium.
+- **Zasady projektowe**: Wytyczne dotyczące stylu, typografii, kolorystyki, siatki, marginesów itp. Dzięki nim każda część aplikacji wygląda i działa spójnie.
+- **Komponenty**: Gotowe, wielokrotnego użytku elementy UI, takie jak przyciski, formularze, karty, nawigacja itp. Komponenty te są zbudowane w sposób modułowy, co pozwala na ich łatwe dopasowanie do różnych kontekstów w aplikacji.
+- **Biblioteka komponentów**: Zbiór zaimplementowanych komponentów, gotowych do użycia w aplikacjach. Zazwyczaj jest ona dostępna jako pakiet `npm`, który można łatwo zaimportować do projektu.
+- **Dokumentacja**: Szczegółowe opisy każdego elementu `Design System`, jego zastosowania, właściwości oraz przykładów użycia. Dokumentacja ułatwia programistom zrozumienie, jak korzystać z `Design System` w codziennej pracy.
+- **Narzędzia**: Automatyzacje, skrypty i konfiguracje, które wspierają implementację `Design System`, na przykład narzędzia do budowania, testowania i wdrażania komponentów.
 
 ## Przykłady popularnych Design Systemów:
 
 ### Material Design
 
-Stworzony przez Google, [Material Design](https://m3.material.io/) to jeden z najbardziej znanych i wszechstronnych systemów projektowania. Oferuje szczegółowe wytyczne dotyczące wszystkiego, od kolorów po animacje.
+Stworzony przez Google, [Material Design](https://m3.material.io/) to jeden z najbardziej znanych i wszechstronnych design systemów. Oferuje szczegółowe wytyczne dotyczące wszystkiego, od kolorów po animacje.
 
 ### Ant Design
 

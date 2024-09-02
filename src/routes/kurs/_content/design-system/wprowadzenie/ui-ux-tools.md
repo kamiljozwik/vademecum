@@ -44,4 +44,4 @@ W procesie tworzenia Design Systemu kluczową rolę odgrywają narzędzia UI/UX.
 - [InVision](https://www.invisionapp.com/)
 - [moqups](https://moqups.com/)
 
-Wykorzystanie odpowiednich narzędzi UI/UX ma istotne znaczenie dla efektywnego tworzenia systemu projektowania. Zdecydowanie [najpopularniejszym i najchętniej adoptowanym](https://uxtools.co/tools/design) rozwiązaniem obecnie jest Figma.
+Wykorzystanie odpowiednich narzędzi UI/UX ma istotne znaczenie dla efektywnego tworzenia design systemu. Zdecydowanie [najpopularniejszym i najchętniej adoptowanym](https://uxtools.co/tools/design) rozwiązaniem obecnie jest Figma.

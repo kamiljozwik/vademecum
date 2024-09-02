@@ -91,24 +91,24 @@ src/
 
   Stosowanie spójnych konwencji nazewnictwa plików ułatwia orientację w projekcie. Oto kilka rekomendacji:
 
-  - Komponenty: Używaj PascalCase dla nazw plików komponentów (np. `Button.jsx`, `FormField.jsx`).
+  - Komponenty: Używaj `PascalCase` dla nazw plików komponentów (np. `Button.jsx`, `FormField.jsx`).
   - Testy: Używaj rozszerzenia `.test.js` lub `.spec.js` dla plików testowych (np. `Button.test.js`).
   - Style: Używaj rozszerzenia `.styles.js` dla plików z definicjami stylów (np. `Button.styles.js`).
 
 - **Nazewnictwo komponentów**
 
-  Komponenty w React powinny być nazwane za pomocą PascalCase, co jest zgodne z konwencją JavaScript dla klas.
+  Komponenty w React powinny być nazwane za pomocą `PascalCase`, co jest zgodne z konwencją JavaScript dla klas.
 
-- **Nazewnictwo props**
+- **Nazewnictwo propsów**
 
-  Propsy powinny być nazwane jasno i opisowo, aby od razu było wiadomo, do czego służą. Używaj camelCase dla nazw propsów.
+  Propsy powinny być nazwane jasno i opisowo, aby od razu było wiadomo, do czego służą. Używaj `camelCase` dla nazw propsów.
 
 - **Nazewnictwo funkcji**
 
-  Nazwy funkcji powinny być opisowe i wskazywać, co dana funkcja robi. Używaj camelCase.
+  Nazwy funkcji powinny być opisowe i wskazywać, co dana funkcja robi. Używaj `camelCase`.
 
 - **Nazewnictwo zmiennych**
 
-  Nazwy zmiennych powinny być opisowe i zrozumiałe. Używaj camelCase dla nazw zmiennych.
+  Nazwy zmiennych powinny być opisowe i zrozumiałe. Używaj `camelCase` dla nazw zmiennych.
 
 Jak wszyscy wiemy, jedną z najtrudniejszych rzeczy w programowaniu jest nazywanie rzeczy, więc sprawdź również dodatkowe materiały, aby znaleźć swoją idealną strukturę oraz konwencje 👇
