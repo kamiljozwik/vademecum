@@ -14,7 +14,7 @@ Theming jest zazwyczaj implementowany przy użyciu bibliotek takich jak [styled-
 
 Większość bibliotek `CSS-in-JS` daje nam możliwość dość łatwej pracy z theme - [Chakra](https://v2.chakra-ui.com/docs/styled-system/customize-theme), [MUI](https://mui.com/material-ui/customization/theming/), [Mantine](https://mantine.dev/theming/theme-object/).
 
-Kluczowymi elementami każdego tematu są:
+Najważniejszymi elementami każdego `theme` są:
 
 - **Kolory**: Definiowanie palety kolorów, która będzie używana w całej aplikacji. Możemy zdefiniować kolory główne, pomocnicze, tła, tekstu itp.
 - **Typografia**: Ustalenie czcionek, ich rozmiarów, grubości i stylów, które będą stosowane w różnych częściach aplikacji.

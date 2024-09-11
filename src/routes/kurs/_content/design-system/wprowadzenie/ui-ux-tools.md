@@ -13,7 +13,7 @@ extra_links:
     href: https://uxtools.co/tools/design
 ---
 
-W procesie tworzenia Design Systemu kluczową rolę odgrywają narzędzia UI/UX. Dzięki nim projektanci i deweloperzy mogą efektywnie współpracować, tworzyć spójne i intuicyjne interfejsy oraz łatwo wprowadzać zmiany i ulepszenia.
+W procesie tworzenia Design Systemu, jedną z najważniejszych ról odgrywają narzędzia UI/UX. Dzięki nim projektanci i deweloperzy mogą efektywnie współpracować, tworzyć spójne i intuicyjne interfejsy oraz łatwo wprowadzać zmiany i ulepszenia.
 
 ## Figma
 

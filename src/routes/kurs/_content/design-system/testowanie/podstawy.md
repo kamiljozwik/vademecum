@@ -88,6 +88,6 @@ Nie chcemy w tym rozdziale tworzyć całego kursu dotyczącego testowania kompon
 - Dokumentuj cele i zakres testów, aby inni członkowie zespołu mogli łatwo zrozumieć, co i dlaczego jest testowane.
 - Używaj komentarzy, aby wyjaśnić złożone lub nietypowe testy.
 
-### 11. Pisz testy zaraz do developmencie
+### 11. Pisz testy zaraz po developmencie
 
 - Nie oszukuj się, że dopiszesz je później 😉

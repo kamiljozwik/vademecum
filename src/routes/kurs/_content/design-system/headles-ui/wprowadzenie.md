@@ -21,7 +21,7 @@ Skorzystanie z komponentów typu Headless w naszym design systemie daje nam spor
 ## Jak działają komponenty Headless UI?
 
 1. **Logika oddzielona od prezentacji**: `Headless components` dostarczają tylko logikę - na przykład zarządzanie stanem rozwinięcia/zwinięcia w przypadku `Dropdown`.
-2. **Zwiększona kontrola**: Ty decydujesz, jak wygląda komponent, jak jest stylizowany i jak się zachowuje wizualnie. Możesz użyć dowolnego frameworka CSS lub systemu stylów.
+2. **Zwiększona kontrola**: Ty decydujesz, jak wygląda komponent, jak jest stylizowany i jak się zachowuje wizualnie. Możesz użyć dowolnego frameworka lub napisać swój własny CSS.
 3. **Integracja z istniejącymi systemami**: Dzięki temu, że `headless components` są tak elastyczne, łatwo integrują się z istniejącymi bibliotekami i stylami w Twoim projekcie.
 
 ## Zalety i wady

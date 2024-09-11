@@ -1,17 +1,18 @@
 p,
-ul {
-	@apply text-lg;
+ul,
+ol {
+  @apply text-lg;
 }
 
 h1 {
-	@apply text-5xl font-bold xl:text-6xl;
-	line-height: initial;
+  @apply text-5xl font-bold xl:text-6xl;
+  line-height: initial;
 }
 
 h2 {
-	@apply text-3xl font-bold xl:text-5xl;
+  @apply text-3xl font-bold xl:text-5xl;
 }
 
 h3 {
-	@apply text-2xl font-bold xl:text-4xl;
+  @apply text-2xl font-bold xl:text-4xl;
 }

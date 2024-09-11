@@ -3,49 +3,52 @@ title: Wersjonowanie
 description: ""
 order: 30
 extra_links:
-  - title: Podaj tytuł...
-    href: Podaj link...
+  - title: What is Semantic Versioning? (semver)
+    href: https://www.youtube.com/watch?v=97i9pOa2EyE
+  - title: How to Version and Changelog your projects automatically to GitHub using Release It
+    href: https://www.youtube.com/watch?v=BbdFfvZNWNw
 ---
 
-Semantyczne wersjonowanie (semver) i zarządzanie wydaniami są kluczowe dla utrzymania spójności i przewidywalności w procesie rozwoju oprogramowania. W tej lekcji dowiesz się, czym jest semantyczne wersjonowanie, dlaczego jest ważne oraz jak automatyzować procesy wersjonowania i wydawania za pomocą narzędzi takich jak `Semantic Release` i `Changesets`.
+Wersjonowanie `Design Systemu` jest ważnym elementem utrzymania spójności i porządku w projekcie, zwłaszcza gdy z systemu korzysta wiele zespołów i projektów. Właściwe zarządzanie wersjami pomaga śledzić zmiany, zapewnia kompatybilność oraz ułatwia wdrażanie poprawek i nowych funkcji.
 
-## Czym jest semantyczne wersjonowanie?
+## Kilka najważniejszych zasad:
 
-Semantyczne wersjonowanie (semver) to system numeracji wersji, który odzwierciedla rodzaj wprowadzanych zmian w oprogramowaniu. Numery wersji składają się z trzech części: głównej (major), pomocniczej (minor) i poprawki (patch), w formacie X.Y.Z.
+1. **Semantyczne wersjonowanie ([semver](https://semver.org/))**
 
-### Kluczowe zasady semantycznego wersjonowania:
+   Stosuj zasady semantycznego wersjonowania (`major.minor.patch`):
 
-- **Główna wersja (major)**: Zmienia się, gdy wprowadzane są zmiany niekompatybilne z poprzednimi wersjami (breaking changes).
-- **Pomocnicza wersja (minor)**: Zmienia się, gdy dodawane są nowe funkcjonalności w sposób kompatybilny z poprzednimi wersjami.
-- **Poprawka (patch)**: Zmienia się, gdy wprowadzane są poprawki błędów i drobne zmiany, które są kompatybilne z poprzednimi wersjami.
+   - **Major (główna wersja)**: wprowadza zmiany, które mogą być niekompatybilne wstecz (wprowadzanie _breaking changes_).
+   - **Minor (wersja pomocnicza)**: dodaje nowe funkcje, które są wstecznie kompatybilne.
+   - **Patch**: wprowadza poprawki błędów i optymalizacje, które nie zmieniają funkcjonalności.
 
-## Znaczenie semantycznego wersjonowania
+2. **Zarządzanie zależnościami**
 
-- **Przewidywalność**: Semantyczne wersjonowanie pozwala użytkownikom oprogramowania przewidzieć, jakie zmiany zostały wprowadzone i jak mogą one wpłynąć na ich projekty.
-- **Zarządzanie zależnościami**: Dzięki semver, zarządzanie zależnościami staje się łatwiejsze, ponieważ numery wersji jasno wskazują na stopień wprowadzonych zmian.
-- **Ułatwienie współpracy**: Semver wspomaga komunikację w zespole i z użytkownikami oprogramowania, jasno określając rodzaj wprowadzanych zmian.
+   Upewnij się, że każdy projekt korzystający z `Design System` ma dobrze zdefiniowane wersje zależności w plikach takich jak `package.json`, co pozwoli uniknąć nieprzewidzianych problemów z kompatybilnością.
 
-## Narzędzia do automatyzacji wersjonowania i wydawania
+3. **Stabilne API komponentów**
 
-1. **Semantic Release**:
+   Staraj się zachować stabilność API komponentów w kolejnych wersjach. Jeśli konieczne są zmiany w komponentach, staraj się dodawać nowe funkcjonalności w sposób, który nie wpływa na dotychczasowe użycie.
 
-   - `Semantic Release` automatyzuje proces wersjonowania i wydawania nowych wersji oprogramowania na podstawie konwencji komunikatów commit.
-   - Integruje się z systemami CI/CD, automatycznie publikując nowe wersje i generując notatki o wydaniu (release notes).
+4. **Komunikacja zmian**
 
-2. **Changesets**:
-   - `Changesets` to narzędzie, które pomaga zarządzać zmianami w monorepo i automatyzować proces wydawania wielu pakietów.
-   - Pozwala na tworzenie plików changeset, które opisują zmiany wprowadzone w danym wydaniu. Na podstawie tych plików generowane są nowe wersje.
+   Każda nowa wersja powinna być dokładnie opisana w `release notes`, aby wszyscy użytkownicy systemu mogli zrozumieć, jakie zmiany zostały wprowadzone, czy są jakieś potencjalne problemy z kompatybilnością oraz co zostało naprawione.
 
-## Proces automatyzacji wydawania
+5. **Usuwanie funkcjonalności**
 
-- **Konwencje commit**: Używanie ustalonych konwencji commit (np. Conventional Commits) pozwala narzędziom takim jak `Semantic Release` określić rodzaj zmian i odpowiednio zaktualizować numery wersji.
-- **Integracja z CI/CD**: Narzędzia takie jak `Semantic Release` i `Changesets` integrują się z systemami CI/CD, automatycznie uruchamiając procesy wersjonowania i wydawania po każdej zmianie w repozytorium.
-- **Generowanie notatek o wydaniu**: Narzędzia te automatycznie generują notatki o wydaniu, które dokumentują zmiany wprowadzone w nowej wersji oprogramowania.
+   Jeśli planujesz usunąć jakieś funkcje lub komponenty, zawsze oznaczaj je jako przestarzałe (`deprecated`) w poprzedniej wersji, zanim usuniesz je w przyszłej wersji `major`. Daje to zespołom czas na adaptację i unikanie nagłych problemów.
 
-## Najlepsze praktyki
+6. **Automatyzacja wersjonowania**
 
-- **Stosowanie ustalonych konwencji**: Upewnij się, że cały zespół przestrzega ustalonych konwencji commit, aby proces automatyzacji wersjonowania działał prawidłowo.
-- **Regularne wydania**: Regularnie publikuj nowe wersje, aby użytkownicy mogli szybko korzystać z nowych funkcjonalności i poprawek.
-- **Dokumentowanie zmian**: Utrzymuj dokładną dokumentację zmian wprowadzonych w każdej wersji, aby użytkownicy mogli łatwo zrozumieć, co zostało zaktualizowane.
+   Stosuj narzędzia do automatycznego zarządzania wersjami, takie jak [semantic-release](https://github.com/semantic-release/semantic-release) lub [release-it](https://github.com/release-it/release-it), które na podstawie commitów i zmian w kodzie mogą automatycznie tworzyć nowe wersje, generować odpowiednie tagi i dokumentację.
 
-Semantyczne wersjonowanie i automatyzacja procesu wydawania są kluczowe dla utrzymania spójności i przewidywalności w projekcie. W tej lekcji omówiliśmy, czym jest semver, dlaczego jest ważne oraz jak używać narzędzi takich jak `Semantic Release` i `Changesets` do automatyzacji tych procesów. Teraz jesteś gotowy do wdrożenia semantycznego wersjonowania i automatyzacji wydawania w swoim projekcie, co pomoże utrzymać wysoką jakość i przewidywalność oprogramowania.
+7. **Testowanie zgodności**
+
+   Każda nowa wersja `Design Systemu` powinna być dokładnie przetestowana pod kątem kompatybilności z istniejącymi aplikacjami. Warto wdrożyć mechanizmy automatycznego testowania, które będą sprawdzały, czy zmiany nie powodują problemów z istniejącym kodem.
+
+8. **Dokumentacja zmian**
+
+   Oprócz `release notes` warto prowadzić szczegółową dokumentację zmian (np. `CHANGELOG.md`), w której opisane są wszystkie nowe funkcje, zmiany w API, usunięte funkcje, poprawki błędów oraz inne istotne informacje.
+
+9. **Tagowanie w systemie kontroli wersji**
+
+   Każda wersja `Design Systemu` powinna być oznaczona odpowiednim tagiem w systemie kontroli wersji (Np. `v1.2.3` dla wydania `1.2.3`), co ułatwi śledzenie zmian, przywracanie poprzednich wersji oraz zarządzanie wersjami w zautomatyzowanych procesach.

@@ -15,7 +15,7 @@ Poza klasycznymi testami wymienionymi w poprzedniej lekcji, w kontekście UI ist
 
 ## Snapshot Testing 📸
 
-Testowanie to polega na przechwytywaniu i porównywaniu "migawki" (`snapshot`) renderowanego komponentu z wcześniej zapisaną wersją. Jest to szybki sposób na upewnienie się, że zmiany w kodzie nie wprowadziły niezamierzonych modyfikacji w wyglądzie i strukturze komponentu.
+Testowanie to polega na przechwytywaniu i porównywaniu "migawki" (`snapshot`) renderowanego komponentu z wcześniej zapisaną wersją. Tymi snapshotami nie są tutaj grafiki, tylko cały kod HTML stojący za komponentem (kod HTML, który znajdzie się w przeglądarce). Jest to szybki sposób na upewnienie się, że zmiany w kodzie nie wprowadziły niezamierzonych modyfikacji w wyglądzie i strukturze komponentu. Jak wygląda flow takiego testowania?
 
 1. **Tworzenie snapshotów**: Podczas pierwszego uruchomienia testu tworzone są snapshoty dla każdego testowanego komponentu.
 2. **Porównywanie snapshotów**: Przy kolejnych uruchomieniach testów, nowe snapshoty są porównywane z zapisanymi wcześniej. Jeśli są różnice, test nie przechodzi.
@@ -34,7 +34,7 @@ Wady:
 
 ## Visual Regression Testing 👀
 
-Wizualne testowanie regresyjne idzie krok dalej niż testowanie migawkowe. Zamiast porównywać kod renderowanego komponentu, porównuje zrzuty ekranu (`screenshots`) komponentów. Dzięki temu można wykryć nawet najmniejsze wizualne różnice.
+Wizualne testowanie regresyjne idzie krok dalej niż testowanie "migawkowe". Zamiast porównywać kod renderowanego komponentu, porównuje zrzuty ekranu (`screenshots`) komponentów. Dzięki temu można wykryć nawet najmniejsze wizualne różnice.
 
 1. **Tworzenie zrzutów ekranu**: Podczas pierwszego uruchomienia testów, dla każdego komponentu tworzony jest zrzut ekranu.
 2. **Porównywanie zrzutów ekranu**: Nowe zrzuty ekranu są porównywane z zapisanymi wcześniej wersjami. Narzędzia do wizualnego testowania regresyjnego zazwyczaj pokazują różnice, co ułatwia ich identyfikację.

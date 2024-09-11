@@ -37,7 +37,7 @@ Przewodnik taki:
 4. **Praca z `Git`**
 
    - Wytyczne dotyczące tworzenia gałęzi (`branching`), np. `feature/`, `bugfix/`, `hotfix/`.
-   - Zalecenia dotyczące tworzenia `commit`ów, np. stylu komunikatów `commit`ów (np. używanie konwencji `Conventional Commits`).
+   - Zalecenia dotyczące tworzenia `commit`ów, (np. używanie konkretnej konwencji tytułów, opisów itp.).
 
 5. **Testowanie**
 
@@ -46,13 +46,13 @@ Przewodnik taki:
 
 6. **Proces `Pull Request` (PR)**
 
-   - Jak tworzyć `Pull Request`y.
-   - Szablon PR, który należy wypełnić (np. co zostało zmienione, dlaczego, jak przetestować).
-   - Kryteria akceptacji PR, np. minimalna liczba recenzji, przejście testów CI/CD.
+   - Jak tworzyć `Pull Requesty`.
+   - Szablon PR, który należy wypełnić (np. co zostało zmienione, dlaczego, jak przetestować?).
+   - Kryteria akceptacji PR (np. minimalna liczba recenzji, przejście testów CI/CD, pokrycie testami).
 
 7. **Wersjonowanie i wydania**
 
-   - Jak wersjonować zmiany zgodnie z `Semantic Versioning`.
+   - Jak wersjonować zmiany zgodnie z [Semantic Versioning](https://semver.org/).
    - Proces tworzenia nowych wydań (releases).
 
 8. **Komunikacja i wsparcie**
@@ -73,3 +73,5 @@ CONTRIBUTING.md
   - Wersjonowanie i wydania
   - Komunikacja i wsparcie
 ```
+
+Pamiętaj, że im więcej czasu poświęcisz na stworzenie porządnego przewodnika, tym więcej później go odzyskasz w trakcie dołączania nowych osób do projektu.
