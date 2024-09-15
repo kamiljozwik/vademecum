@@ -1,5 +1,5 @@
 ---
 title: Utrzymanie
-description: ""
+description: "Design System na lata"
 order: 70
 ---

@@ -1,5 +1,5 @@
 ---
 title: Testowanie
-description: ""
+description: "Testowanie komponentów UI"
 order: 60
 ---

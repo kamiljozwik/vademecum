@@ -4,7 +4,7 @@ description: ""
 order: 40
 ---
 
-Wykorzystanie gotowych bibliotek komponentów, takich jak `Bootstrap`, `ChakraUI` czy `Material-UI`, jest stosunkowo dość częstym wyborem podczas budowania własnego Design Systemu. Poniżej krótko omówię główne zalety i wady podejścia opartego na takich rozwiązaniach.
+Wykorzystanie gotowych bibliotek komponentów takich jak [Bootstrap](https://getbootstrap.com/), [ChakraUI](https://chakra-ui.com/) czy [Material-UI](https://mui.com/), jest stosunkowo dość częstym wyborem podczas budowania własnego Design Systemu. Poniżej krótko omówię główne zalety i wady podejścia opartego na takich rozwiązaniach.
 
 ## Zalety 👍
 

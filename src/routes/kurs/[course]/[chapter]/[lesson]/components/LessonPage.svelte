@@ -7,6 +7,7 @@
   import "$lib/styles/code.css";
   import { removeEmoji } from "$lib/utils/removeEmoji";
   import ExternalLink from "$lib/components/ui/ExternalLink.svelte";
+  import LessonNav from "./LessonNav.svelte";
 
   export let chaptersWithLessons: ReturnType<typeof getChaptersWithLessons>;
   export let discordApi = "";
@@ -32,29 +33,19 @@
       <VideoPlayer video={lesson?.lessonMeta.video} next={next?.slug} />
     {/if}
 
-    <nav
-      class="mb-6 flex justify-center items-center rounded-lg px-4 py-6 shadow-md"
-    >
-      <div>
-        <a
-          class={cn("btn btn-neutral", { "btn-disabled": !prev })}
-          href={`${prev?.slug}`}>👈</a
-        >
-        <a class="btn btn-neutral" href={`/kurs/${$page.params.course}`}>🏠</a>
-        <a
-          class={cn("btn btn-neutral", {
-            "btn-disabled": !next,
-          })}
-          href={`${next?.slug}`}>👉</a
-        >
-      </div>
-    </nav>
+    <LessonNav {prev} {next} />
   {/key}
 
   <header class="mb-6 border-b-2 border-dashed border-neutral">
-    <a href={"./"} class="text-sm uppercase no-underline hover:underline"
-      >{$page.params.chapter.replaceAll("-", " ")}</a
-    >
+    <div>
+      <a href={"../"} class="text-sm uppercase no-underline hover:text-white"
+        >{$page.params.course.replaceAll("-", " ")}</a
+      >
+      <span>/</span>
+      <a href={"./"} class="text-sm uppercase no-underline hover:text-white"
+        >{$page.params.chapter.replaceAll("-", " ")}</a
+      >
+    </div>
     <h1>
       <span class="gradient-text mb-0 inline-block"
         >{removeEmoji(lesson?.lessonMeta.title)}</span
@@ -67,6 +58,8 @@
     <div>
       <svelte:component this={lesson?.lessonContent} />
     </div>
+
+    <LessonNav {prev} {next} />
 
     {#if lesson?.lessonMeta.extra_links}
       <div>

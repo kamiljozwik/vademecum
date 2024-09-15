@@ -1,5 +1,5 @@
 ---
 title: Headless UI
-description: ""
+description: "Nie wymyślajmy koła na nowo"
 order: 50
 ---

@@ -1,6 +1,6 @@
 ---
 title: Funkcje anonimowe
-description: ''
+description: ""
 order: 100
 free: false
 extra_links:
@@ -20,7 +20,7 @@ Przykład funkcji anonimowej jako callbacka. W poniższym przykładzie funkcja z
 
 ```javascript
 setTimeout(function () {
-	console.log('To jest przykład funkcji anonimowej jako callback.');
+  console.log("To jest przykład funkcji anonimowej jako callback.");
 }, 2000);
 ```
 
@@ -31,8 +31,8 @@ Funkcje anonimowe są często używane przy dodawaniu obsługi zdarzeń w aplika
 W poniższym przykładzie funkcja zostanie wywołana po kliknięciu na przycisk.
 
 ```javascript
-document.getElementById('przycisk').addEventListener('click', function () {
-	alert('Przycisk został kliknięty.');
+document.getElementById("przycisk").addEventListener("click", function () {
+  alert("Przycisk został kliknięty.");
 });
 ```
 
@@ -44,7 +44,7 @@ W JavaScript często wykonujemy operacje na tablicach, takie jak `map`, `filter`
 let liczby = [1, 2, 3, 4, 5];
 
 let kwadraty = liczby.map(function (liczba) {
-	return liczba * liczba;
+  return liczba * liczba;
 });
 
 console.log(kwadraty); // Wynik: [1, 4, 9, 16, 25]

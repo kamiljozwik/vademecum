@@ -1,5 +1,5 @@
 ---
 title: Dobre praktyki
-description: ""
+description: "Kilka pomocnych wskazówek"
 order: 30
 ---

@@ -1,5 +1,5 @@
 ---
 title: adaptacja
-description: ""
+description: "Wprowadzenie nowego design systemu"
 order: 80
 ---

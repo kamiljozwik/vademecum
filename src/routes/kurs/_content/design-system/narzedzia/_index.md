@@ -1,5 +1,5 @@
 ---
 title: Narzędzia
-description: ""
+description: "Najczęściej wykorzystywane narzędzia"
 order: 20
 ---
