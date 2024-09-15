@@ -23,7 +23,17 @@
       },
     ]}
   />
-
+  <CoursesGroup
+    group="javascript"
+    courses={[
+      {
+        title: "Solidne podstawy",
+        desc: "Poznaj podstawy języka JavaScript",
+        link: "/kurs/js-podstawy",
+        draft: false,
+      },
+    ]}
+  />
   <CoursesGroup
     group="repository"
     courses={[
@@ -35,27 +45,14 @@
       },
     ]}
   />
-
   <CoursesGroup
-    group="javascript"
+    group="design-system"
     courses={[
       {
-        title: "Solidne podstawy",
-        desc: "Poznaj podstawy języka JavaScript",
-        link: "/kurs/js-podstawy",
+        title: "Design System i biblioteka komponentów",
+        desc: "Dowiedz się, czym jest design system i jak zbudować własną bibliotekę komponentów",
+        link: "/kurs/design-system",
         draft: false,
-      },
-      {
-        title: "JavaScript w przeglądarce",
-        desc: "Dodaj dynamiczne zachowanie do swojej strony internetowej",
-        link: "/kurs/js-podstawy",
-        draft: true,
-      },
-      {
-        title: "Zaawansowane tematy",
-        desc: "Przenieś swoje umiejętności na wyższy poziom",
-        link: "/kurs/js-podstawy",
-        draft: true,
       },
     ]}
   />

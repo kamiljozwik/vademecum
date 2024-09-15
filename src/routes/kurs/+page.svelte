@@ -7,7 +7,7 @@
 </script>
 
 <main>
-  <PageHeader title="Wszystkie kursy" subtitle="Pełna oferta" />
+  <PageHeader title="Wszystkie kursy" subtitle="Owocnej nauki 🍌" />
   <ul class="flex flex-col-reverse gap-12">
     {#each torender as course}
       <!-- <Glow> -->

@@ -34,7 +34,7 @@
         >
       </div>
       <div>
-        Doświadczony developer oraz twórca <ExternalLink
+        Developer oraz twórca <ExternalLink
           class="link"
           href="https://frontstack.pl">frontstack.pl</ExternalLink
         >

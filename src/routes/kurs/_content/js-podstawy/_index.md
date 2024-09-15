@@ -2,7 +2,7 @@
 lastmod: 2024-03-04
 title: Podstawy JavaScript
 description: Poznaj solidne podstawy języka JavaScript
-order: 40
+order: 20
 tags: [javascript]
 video: Rr5AqASIyxw
 author: Kamil Józwik

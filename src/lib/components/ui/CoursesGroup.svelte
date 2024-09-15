@@ -1,7 +1,7 @@
 <script lang="ts">
   // import ScrollShow from '$lib/components/ui/ScrollShow.svelte';
+  // import Glow from "$lib/components/ui/Glow.svelte";
   import { cn } from "$lib/utils/cn";
-  import Glow from "$lib/components/ui/Glow.svelte";
 
   type Course = {
     title: string;

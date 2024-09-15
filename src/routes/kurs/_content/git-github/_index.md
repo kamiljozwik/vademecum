@@ -2,7 +2,7 @@
 lastmod: 2024-02-15
 title: Git i GitHub
 description: Poznaj podstawy systemu kontroli wersji oraz platformy GitHub
-order: 20
+order: 30
 tags: ["git", "github"]
 video: Rr5AqASIyxw
 author: Kamil Józwik
