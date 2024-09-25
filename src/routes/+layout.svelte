@@ -26,6 +26,9 @@
     name="description"
     content="Darmowe materiały przygotowane specjalnie dla programistów frontend"
   />
+  <meta property="og:image" content="/img/open-graph/landing.webp" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vademecum.frontstack.pl/" />
 </svelte:head>
 
 <div>

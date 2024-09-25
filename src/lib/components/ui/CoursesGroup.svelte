@@ -38,7 +38,9 @@
                 {course.title}
               </h3>
               {#if course.draft}
-                <span class="badge badge-neutral">W przygotowaniu ⌛</span>
+                <span class="badge badge-neutral animate-bounce"
+                  >W przygotowaniu 🚀</span
+                >
               {/if}
             </div>
             <div class="mt-2">
